@@ -1,0 +1,12 @@
+<div class="text-white pl-5">
+  <a [routerLink]="file?.folder ? undefined : file?.endpoint" class="flex gap-2 items-center" [style]="file?.folder ? { cursor: 'pointer'} : null" (click)="changeOpen()">
+    <fa-icon class="text-sm min-w-5" [style]="{color: file?.iconColor}" [icon]="file?.icon?? folderIcon"></fa-icon>
+    <p class="text-base">{{file?.name}}</p>
+  </a>
+
+  @if (opened) {
+    @for (subFile of file?.subFiles; track subFile.name) {
+      <app-file [file]="subFile"></app-file>
+    }
+  }
+</div>
