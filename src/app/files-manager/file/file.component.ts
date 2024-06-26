@@ -4,6 +4,9 @@ import {FaIconComponent, IconDefinition} from "@fortawesome/angular-fontawesome"
 import {faFolderOpen, faFolderClosed} from "@fortawesome/free-solid-svg-icons";
 import {NgClass, NgStyle} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import {MobileCheckService} from "../../services/mobile-check.service";
+import {SideNavService} from "../../services/side-nav.service";
+import {first} from "rxjs";
 
 @Component({
   selector: 'app-file',
@@ -23,13 +26,28 @@ export class FileComponent implements OnChanges{
   public opened: boolean = false;
   public folderIcon: IconDefinition = faFolderClosed;
 
+  constructor(
+    private readonly mobileCheckService: MobileCheckService,
+    private readonly sideNavService: SideNavService
+  ) {
+  }
+
   public ngOnChanges(changes: SimpleChanges): void {
     this.opened = this.file?.defaultOpened ?? false;
     this.folderIcon = this.opened ? faFolderOpen : faFolderClosed;
   }
 
-  public changeOpen(): void {
+  public doAction(): void {
     this.opened = !this.opened;
     this.folderIcon = this.opened ? faFolderOpen : faFolderClosed;
+
+    if (!this.file?.folder && this.file?.endpoint != null) {
+      this.mobileCheckService.isMobile
+        .pipe(first()).subscribe({
+        next: mobile => {
+          if (mobile) this.sideNavService.close()
+        }
+      })
+    }
   }
 }

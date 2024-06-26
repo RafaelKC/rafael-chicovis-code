@@ -1,0 +1,6 @@
+<mat-drawer-container class="w-full" [hasBackdrop]="false">
+  <mat-drawer #drawer [mode]="isMobile ? 'over': 'side'" [(opened)]="opened">
+    <app-files-manager class="w-full"></app-files-manager>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>
