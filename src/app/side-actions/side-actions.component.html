@@ -5,5 +5,9 @@
   <fa-icon class="cursor-pointer" [icon]="gitIcon"></fa-icon>
   <span class="flex-grow"></span>
   <fa-icon class="cursor-pointer" [icon]="codeBranchIcon"></fa-icon>
-  <fa-icon class="cursor-pointer" [icon]="terminalIcon"></fa-icon>
+
+  <button (click)="toggleTerminal()" class="flex gap-5 flex-col items-center mt-5 w-3">
+    <p class="rotate-[270deg]">Terminal</p>
+    <fa-icon class="cursor-pointer" [icon]="terminalIcon"></fa-icon>
+  </button>
 </div>

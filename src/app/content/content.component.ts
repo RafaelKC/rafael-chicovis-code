@@ -5,6 +5,7 @@ import {RouterOutlet} from "@angular/router";
 import {SubscriptionManager} from "../tokens/subscription-manager";
 import {MobileCheckService} from "../services/mobile-check.service";
 import {SideNavService} from "../services/side-nav.service";
+import {TerminalComponent} from "../terminal/terminal.component";
 
 @Component({
   selector: 'app-content',
@@ -13,7 +14,8 @@ import {SideNavService} from "../services/side-nav.service";
     MatDrawerContainer,
     FilesManagerComponent,
     RouterOutlet,
-    MatDrawer
+    MatDrawer,
+    TerminalComponent
   ],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'

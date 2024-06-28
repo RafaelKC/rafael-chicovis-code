@@ -6,3 +6,7 @@ mat-drawer {
 mat-drawer-container, mat-drawer {
   background-color: #0a0a11 !important;
 }
+
+:host {
+  flex-direction: column;
+}
