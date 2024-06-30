@@ -3,9 +3,12 @@
     <fa-icon [icon]="folderIcon"></fa-icon>
   </button>
   <fa-icon class="cursor-pointer" [icon]="gitIcon"></fa-icon>
-  <span class="flex-grow"></span>
-  <fa-icon class="cursor-pointer" [icon]="codeBranchIcon"></fa-icon>
 
+  <app-lang class="mt-2"></app-lang>
+
+  <span class="flex-grow"></span>
+
+  <fa-icon class="cursor-pointer" [icon]="codeBranchIcon"></fa-icon>
   <button (click)="toggleTerminal()" class="flex gap-5 flex-col items-center mt-5 w-3">
     <p class="rotate-[270deg]">Terminal</p>
     <fa-icon class="cursor-pointer" [icon]="terminalIcon"></fa-icon>

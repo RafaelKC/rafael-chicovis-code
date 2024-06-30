@@ -3,12 +3,14 @@ import {faCodeBranch, faCodeCommit, faFolderClosed, faTerminal} from "@fortaweso
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {SideNavService} from "../services/side-nav.service";
 import {TerminalService} from "../services/terminal.service";
+import {LangComponent} from "./lang/lang.component";
 
 @Component({
   selector: 'app-side-actions',
   standalone: true,
   imports: [
-    FaIconComponent
+    FaIconComponent,
+    LangComponent
   ],
   templateUrl: './side-actions.component.html',
   styleUrl: './side-actions.component.scss'

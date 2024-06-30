@@ -2,13 +2,15 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NgClass, NgStyle} from "@angular/common";
 import {SubscriptionManager} from "../tokens/subscription-manager";
 import {TerminalService} from "../services/terminal.service";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-terminal',
   standalone: true,
   imports: [
     NgStyle,
-    NgClass
+    NgClass,
+    TranslateModule
   ],
   templateUrl: './terminal.component.html',
   styleUrl: './terminal.component.scss'
