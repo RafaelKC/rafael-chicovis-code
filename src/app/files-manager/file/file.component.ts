@@ -7,6 +7,7 @@ import {RouterLink} from "@angular/router";
 import {MobileCheckService} from "../../services/mobile-check.service";
 import {SideNavService} from "../../services/side-nav.service";
 import {first} from "rxjs";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-file',
@@ -15,7 +16,8 @@ import {first} from "rxjs";
     FaIconComponent,
     NgClass,
     NgStyle,
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './file.component.html',
   styleUrl: './file.component.scss'

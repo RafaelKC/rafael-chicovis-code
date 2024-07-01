@@ -1,6 +1,20 @@
+@use '@angular/material' as mat;
+@use './m3-theme';
+
+@include mat.core();
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  @include mat.core-theme(m3-theme.$dark-theme);
+  @include mat.button-theme(m3-theme.$dark-theme);
+  @include mat.input-theme(m3-theme.$dark-theme);
+  @include mat.all-component-themes(m3-theme.$dark-theme);
+  @include mat.system-level-colors(m3-theme.$dark-theme);
+  @include mat.system-level-typography(m3-theme.$dark-theme);
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

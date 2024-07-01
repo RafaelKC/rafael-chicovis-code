@@ -26,6 +26,6 @@ export const appConfig: ApplicationConfig = {
         deps: [HttpClient]
       },
       defaultLanguage: 'en',
-    }))
+    })), provideAnimationsAsync()
   ]
 };

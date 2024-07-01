@@ -2,5 +2,28 @@
   "Terminal": {
     "Name": "@RafaelChicovis",
     "DevelopWith": "Developed with Angular and TailwindCSS"
+  },
+  "Screens": {
+    "SendMessage": "Send message",
+    "ContactsInfo": "Contacts info",
+    "Contacts": "Contacts",
+    "Setup": "Setup",
+    "Presentation": "Presentation",
+    "Knowledge": "Knowledge",
+    "University": "University",
+    "Certificates": "Certificates",
+    "Skills": "Skills",
+    "Korp": "Korp",
+    "Experiences": "Experiences",
+    "Projects": "Projects"
+  },
+  "Message": {
+    "SendMessage": "Send a message",
+    "Name": "Name",
+    "Email": "Email",
+    "Organization": "Organization",
+    "Message": "Message",
+    "Send": "Send",
+    "Success": "Success"
   }
 }

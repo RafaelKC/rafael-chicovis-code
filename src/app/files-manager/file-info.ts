@@ -3,9 +3,9 @@ import {IconDefinition} from "@fortawesome/angular-fontawesome";
 export type FileInfo = {
   icon?: IconDefinition,
   name: string,
-  defaultOpened: boolean,
+  defaultOpened?: boolean,
   folder: boolean,
-  endpoint: string,
+  endpoint?: string,
   iconColor?: string,
-  subFiles: FileInfo[]
+  subFiles?: FileInfo[]
 }
