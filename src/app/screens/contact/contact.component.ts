@@ -1,15 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {MessageDto} from "./dtos/message-dto";
-import {ModelFormGroup} from "../../tokens/model-form-group";
-import {HttpClient} from "@angular/common/http";
-import {first} from "rxjs";
-import {TranslateModule} from "@ngx-translate/core";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {MatButton} from "@angular/material/button";
-import {MatDialog} from "@angular/material/dialog";
-import {SuccessComponent} from "./success/success.component";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MessageDto } from './dtos/message-dto';
+import { ModelFormGroup } from '../../tokens/model-form-group';
+import { HttpClient } from '@angular/common/http';
+import { first } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessComponent } from './success/success.component';
 
 @Component({
   selector: 'app-contact',
@@ -19,7 +19,7 @@ import {SuccessComponent} from "./success/success.component";
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButton,
+    MatButton
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
@@ -32,12 +32,12 @@ export class ContactComponent implements OnInit {
   constructor(
     private readonly fb: FormBuilder,
     private readonly httpClient: HttpClient,
-    private readonly dialog: MatDialog,
-    ) {
+    private readonly dialog: MatDialog
+  ) {
   }
 
   public ngOnInit(): void {
-    this.setForm()
+    this.setForm();
   }
 
   public get canSend(): boolean {
@@ -65,7 +65,7 @@ export class ContactComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
       accessKey: [''],
-      organization: [''],
+      organization: ['']
     });
     this.loaded = true;
   }
